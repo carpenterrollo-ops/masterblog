@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Neuen Blogbeitrag hinzufügen</title>
+    <!-- Verlinkung zu deiner vorhandenen CSS-Datei -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Neuen Beitrag erstellen</h1>
+
+    <!-- Das Formular schickt die Daten per POST an /add -->
+    <form action="/add" method="POST" class="post">
+
+        <div style="margin-bottom: 15px;">
+            <label for="author" style="display: block; font-weight: bold; margin-bottom: 5px;">Autor:</label>
+            <input type="text" id="author" name="author" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="title" style="display: block; font-weight: bold; margin-bottom: 5px;">Titel:</label>
+            <input type="text" id="title" name="title" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="content" style="display: block; font-weight: bold; margin-bottom: 5px;">Inhalt:</label>
+            <textarea id="content" name="content" rows="6" required style="width: 100%; padding: 8px; box-sizing: border-box;"></textarea>
+        </div>
+
+        <button type="submit" style="background-color: #4F4F4F; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+            Beitrag speichern
+        </button>
+
+    </form>
+
+</body>
+</html>
