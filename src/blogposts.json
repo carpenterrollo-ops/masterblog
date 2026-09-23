@@ -1,9 +1,9 @@
 [
     {
-        "author": "Change autho",
+        "id": 1,
+        "author": "John Doe",
         "title": "First Post",
-        "content": "change content",
-        "id": 1
+        "content": "This is my first post."
     },
     {
         "id": 2,
