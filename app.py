@@ -1,6 +1,10 @@
-"""Flask web application for managing blog posts with full CRUD functionality."""
-"""Warning: By startup a predefined setup for blog post are created."""
-"""Deactivate this behaviour by removing our comment out datahandler.generate_data_mock()."""
+"""Flask web application for managing blog posts with full CRUD functionality.
+
+Warning:
+    On startup, a predefined setup of blog posts is generated.
+    Deactivate this behaviour by removing or commenting out:
+    datahandler.generate_data_mock() in main
+"""
 from flask import Flask, render_template, request, redirect, url_for
 import datahandler
 
