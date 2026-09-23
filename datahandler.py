@@ -20,9 +20,9 @@ def generate_data_mock():
     with open(_file_path, "w") as f:
         json.dump(data_mock, f, indent=4)
 
-def add_or_change_entry(data:dict):
+def add_or_update_entry(data:dict):
     # if no id set, new entry will be added
-    # existing id signals entry change. if index does not exist, error is raised
+    # existing id signals entry has to be replaced with new one. if index does not exist, error is raised
     if data is None:
         return
     all_blog_posts = get_all_blogposts()
@@ -69,6 +69,12 @@ def save_all_blogposts(posts: list):
     #overwrite file content of datasource with new entries
     with open(_file_path, "w") as f:
         json.dump(posts, f, indent=4)
+
+def fetch_post_by_id(post_id: int):
+    for post in get_all_blogposts():
+        if post["id"] == post_id:
+            return post
+    return None
 
 if __name__ == '__main__':
     generate_data_mock()
